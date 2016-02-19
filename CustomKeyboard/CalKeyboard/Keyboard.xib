@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="CalKeyboard" customModuleProvider="target">
@@ -14,7 +14,64 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRt-12-JcF">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Yl3-uT-hCD">
+                    <rect key="frame" x="20" y="44" width="335" height="111"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-OB-Fso">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YK-GQ-Iwt">
+                                    <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
+                                    <state key="normal" title="I Hate You"/>
+                                    <connections>
+                                        <action selector="iHateYou:" destination="-1" eventType="touchUpInside" id="wtH-Ly-aTR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkS-XP-ryT">
+                                    <rect key="frame" x="151" y="0.0" width="64" height="30"/>
+                                    <state key="normal" title="You Suck"/>
+                                    <connections>
+                                        <action selector="youSuck:" destination="-1" eventType="touchUpInside" id="V1K-uK-QQc"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9K-bu-a63">
+                                    <rect key="frame" x="275" y="0.0" width="60" height="30"/>
+                                    <state key="normal" title="Go Away"/>
+                                    <connections>
+                                        <action selector="goAway:" destination="-1" eventType="touchUpInside" id="4By-IQ-YQn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="kz8-lC-r4B">
+                            <rect key="frame" x="0.0" y="81" width="335" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6de-HH-iqS">
+                                    <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                    <state key="normal" title="You're Ugly"/>
+                                    <connections>
+                                        <action selector="youreUgly:" destination="-1" eventType="touchUpInside" id="KA2-QL-zkP"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypA-Gy-UqV">
+                                    <rect key="frame" x="138" y="0.0" width="81" height="30"/>
+                                    <state key="normal" title="I Don't Care"/>
+                                    <connections>
+                                        <action selector="iDontCare:" destination="-1" eventType="touchUpInside" id="fbS-YU-Xqg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J37-mf-pmD">
+                                    <rect key="frame" x="279" y="0.0" width="56" height="30"/>
+                                    <state key="normal" title="Shut Up"/>
+                                    <connections>
+                                        <action selector="shutUp:" destination="-1" eventType="touchUpInside" id="I24-gK-0ow"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRt-12-JcF">
                     <rect key="frame" x="8" y="162" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="eu0-xj-Jov"/>
@@ -24,8 +81,8 @@
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="gRt-12-JcF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="LUD-YX-JVD"/>
-                <constraint firstAttribute="bottom" secondItem="gRt-12-JcF" secondAttribute="bottom" constant="8" id="tEE-h3-FZa"/>
+                <constraint firstItem="Yl3-uT-hCD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2L2-8H-gXc"/>
+                <constraint firstItem="Yl3-uT-hCD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ff3-Ah-u9l"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

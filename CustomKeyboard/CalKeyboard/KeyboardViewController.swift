@@ -9,7 +9,34 @@
 import UIKit
 
 class KeyboardViewController: UIInputViewController {
+    @IBOutlet weak var ihy: UIButton!
 
+    @IBOutlet weak var ys: UIButton!
+    
+    @IBAction func iHateYou(sender: AnyObject) {
+        textDocumentProxy.insertText("I Love You! ")
+    }
+
+    @IBAction func youSuck(sender: AnyObject) {
+        textDocumentProxy.insertText("You are amazing! ")
+    }
+
+    @IBAction func goAway(sender: AnyObject) {
+        textDocumentProxy.insertText("Stay with me! ")
+    }
+    
+    @IBAction func youreUgly(sender: AnyObject) {
+        textDocumentProxy.insertText("You are beautiful! ")
+    }
+    
+    @IBAction func iDontCare(sender: AnyObject) {
+        textDocumentProxy.insertText("I care! ")
+    }
+    
+    @IBAction func shutUp(sender: AnyObject) {
+        textDocumentProxy.insertText("Tell me more! ")
+    }
+    
     @IBOutlet var nextKeyboardButton: UIButton!
     
     var keyboardView: UIView!
@@ -36,6 +63,15 @@ class KeyboardViewController: UIInputViewController {
 
     override func textDidChange(textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
+    }
+    func youSuck(){
+        textDocumentProxy.insertText("You are amazing. ")
+    }
+    
+    func loadTargets(){
+        //ihy.addTarget(self, action: "iHateYou", forControlEvents: .TouchUpInside)
+        //ys.addTarget(self, action: "youSuck", forControlEvents: .TouchUpInside)
+        
     }
 
     func loadInterface() {
